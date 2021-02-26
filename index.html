@@ -26,7 +26,7 @@
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
@@ -41,10 +41,13 @@
     <nav id="MainMenu" class="navbar navbar-expand-lg">
       <div class="container">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
         </button>
         <div class="top-left-banner">
-          <span class="white heavy">FREE SHIPPING</span> ON ORDERS OF $50 OR MORE
+          <span class="white heavy">FREE SHIPPING&nbsp;</span> ON ORDERS OF $50 OR MORE
         </div>
         <div class="d-lg-none mx-auto">
           <a class="navbar-brand" href="#">
@@ -85,18 +88,18 @@
           <div class="col-auto mx-auto">
             <ul class="nav">
               <li class="nav-item">
-                <a class="nav-link" href="#"><span class="find-by">Find by</span> Brand <i class="fas fa-caret-down"></i></a>
+                <a class="nav-link" href="#"><span class="find-by">Find by</span> Brand <span class="IM-caret-down"></span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#"><span class="find-by">Find by</span> Part Type <i class="fas fa-caret-down"></i></a>
+                <a class="nav-link" href="#"><span class="find-by">Find by</span> Part Type <span class="IM-caret-down"></span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#"><span class="find-by invisible">Find by</span>Search</a>        
+                <a class="nav-link" href="#"><span class="find-by invisible">Find by</span>Search <span class="IM-caret-down"></span></a>        
               </li>
             </ul>
           </div>
           <div class="col-auto d-none d-lg-block">
-            <a class="nav-link" href="#"><span class="find-by">Give us a Call</span> (800) 555-1212</a>
+            <a class="nav-link m-0 pr-0" href="tel:800-555-1212"><span class="find-by">Give us a Call</span> (800) 555-1212</a>
           </div>
         </div>
       </div>
@@ -123,214 +126,214 @@
           <h1 class="page-title">Spare Parts</h1>
         </div>
 
-        <nav id="SidebarFilters" class="col-lg-2 d-none d-lg-block">
+        <nav id="SidebarFilters" class="col-lg-3 d-none d-lg-block">
           <h4 class="sidebar-title">Filters</h4>
           <ul class="nav flex-column">
             <li class="nav-item">
-              <a href="#" class="nav-link">Option With Wrapping Line</a>
+              <a href="#" title="Option With Wrapping Line" class="nav-link">Option With Wrapping Line</a>
             </li>
             <li class="nav-item active">
-              <a href="#" class="nav-link">Active/Hover</a>
+              <a href="#" title="Active/Hover" class="nav-link active">Active/Hover</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link">Filter Option</a>
+              <a href="#" title="Filter Option" class="nav-link">Filter Option</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link">Long Filter Option</a>
+              <a href="#" title="Long Filter Option" class="nav-link">Long Filter Option</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link">Filter Option</a>
+              <a href="#" title="Filter Option" class="nav-link">Filter Option</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link">Filter Option</a>
+              <a href="#" title="Filter Option" class="nav-link">Filter Option</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link">Filter Option</a>
+              <a href="#" title="Filter Option" class="nav-link">Filter Option</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link">Show All</a>
+              <a href="#" title="Show All" class="nav-link">Show All</a>
             </li>
           </ul>
         </nav>
         <!-- /#SidebarFilters -->
 
-        <main role="main" class="content col-lg-10">
+        <main id="ProductGrid" class="col-lg-9">
 
-          <div class="product-grid row">
+          <div class="row">
 
-            <div class="grid-item col-6 col-lg-3">
+            <div class="grid-item col-6 col-md-4 col-lg-3">
               <a href="#">
                 <div class="item-img">
-                  <img src="assets/img/1.png" alt="" class="img-fluid">
+                  <img src="assets/img/1.png" alt="Alt Text" class="img-fluid">
                 </div>
                 <div class="item-name">
                   Product Name
                 </div>
-                <button class="overlay d-none">
+                <div class="overlay d-none">
                   View
-                </button>
+                </div>
               </a>
             </div>
 
-            <div class="grid-item col-6 col-lg-3">
+            <div class="grid-item col-6 col-md-4 col-lg-3">
               <a href="#">
                 <div class="item-img">
-                  <img src="assets/img/lupe-fiasco-product-red-converse-all-star-01.png" alt="" class="img-fluid">
+                  <img src="assets/img/lupe-fiasco-product-red-converse-all-star-01.png" alt="Alt Text" class="img-fluid">
                 </div>
                 <div class="item-name">
                   Product Name
                 </div>
-                <button class="overlay d-none">
+                <div class="overlay d-none">
                   View
-                </button>
+                </div>
               </a>
             </div>
 
-            <div class="grid-item col-6 col-lg-3">
+            <div class="grid-item col-6 col-md-4 col-lg-3">
               <a href="#">
                 <div class="item-img">
-                  <img src="assets/img/Layer_50.png" alt="" class="img-fluid">
+                  <img src="assets/img/Layer_50.png" alt="Alt Text" class="img-fluid">
                 </div>
                 <div class="item-name">
                   Product Name
                 </div>
-                <button class="overlay d-none">
+                <div class="overlay d-none">
                   View
-                </button>
+                </div>
               </a>
             </div>
 
-            <div class="grid-item col-6 col-lg-3">
+            <div class="grid-item col-6 col-md-4 col-lg-3">
               <a href="#">
                 <div class="item-img">
-                  <img src="assets/img/1358338402Intel_Reader_ProductShot.png" alt="" class="img-fluid">
+                  <img src="assets/img/1358338402Intel_Reader_ProductShot.png" alt="Alt Text" class="img-fluid">
                 </div>
                 <div class="item-name">
                   Product Name
                 </div>
-                <button class="overlay d-none">
+                <div class="overlay d-none">
                   View
-                </button>
+                </div>
               </a>
             </div>
 
-            <div class="grid-item col-6 col-lg-3">
+            <div class="grid-item col-6 col-md-4 col-lg-3">
               <a href="#">
                 <div class="item-img">
-                  <img src="assets/img/1467966472-logo-img-product-db.png" alt="" class="img-fluid">
+                  <img src="assets/img/1467966472-logo-img-product-db.png" alt="Alt Text" class="img-fluid">
                 </div>
                 <div class="item-name">
                   Product Name
                 </div>
-                <button class="overlay d-none">
+                <div class="overlay d-none">
                   View
-                </button>
+                </div>
               </a>
             </div>
 
-            <div class="grid-item col-6 col-lg-3">
+            <div class="grid-item col-6 col-md-4 col-lg-3">
               <a href="#">
                 <div class="item-img">
-                  <img src="assets/img/products-camp-kitchen-thumb.png" alt="" class="img-fluid">
+                  <img src="assets/img/products-camp-kitchen-thumb.png" alt="Alt Text" class="img-fluid">
                 </div>
                 <div class="item-name">
                   Long Product Name With Wrapping Line
                 </div>
-                <button class="overlay d-none">
+                <div class="overlay d-none">
                   View
-                </button>
+                </div>
               </a>
             </div>
 
-            <div class="grid-item col-6 col-lg-3">
+            <div class="grid-item col-6 col-md-4 col-lg-3">
               <a href="#">
                 <div class="item-img">
-                  <img src="assets/img/DSC_5994.png" alt="" class="img-fluid">
+                  <img src="assets/img/DSC_5994.png" alt="Alt Text" class="img-fluid">
                 </div>
                 <div class="item-name">
                   Product Name
                 </div>
-                <button class="overlay d-none">
+                <div class="overlay d-none">
                   View
-                </button>
+                </div>
               </a>
             </div>
 
-            <div class="grid-item col-6 col-lg-3">
+            <div class="grid-item col-6 col-md-4 col-lg-3">
               <a href="#">
                 <div class="item-img">
-                  <img src="assets/img/phil-teds-sport-inline-auto-stop-stroller-in-midnight-3-4-view_product_large.png" alt="" class="img-fluid">
+                  <img src="assets/img/phil-teds-sport-inline-auto-stop-stroller-in-midnight-3-4-view_product_large.png" alt="Alt Text" class="img-fluid">
                 </div>
                 <div class="item-name">
                   Long Product Name With Wrapping Line
                 </div>
-                <button class="overlay d-none">
+                <div class="overlay d-none">
                   View
-                </button>
+                </div>
               </a>
             </div>
 
-            <div class="grid-item col-6 col-lg-3">
+            <div class="grid-item col-6 col-md-4 col-lg-3">
               <a href="#">
                 <div class="item-img">
-                  <img src="assets/img/oink-final.png" alt="" class="img-fluid">
+                  <img src="assets/img/oink-final.png" alt="Alt Text" class="img-fluid">
                 </div>
                 <div class="item-name">
                   Product Name
                 </div>
-                <button class="overlay d-none">
+                <div class="overlay d-none">
                   View
-                </button>
+                </div>
               </a>
             </div>
 
-            <div class="grid-item col-6 col-lg-3">
+            <div class="grid-item col-6 col-md-4 col-lg-3">
               <a href="#">
                 <div class="item-img">
-                  <img src="assets/img/iPhone6_34FR_SpGry_iPhone6plus_34FL_SpGry_Homescreen_HERO.png" alt="" class="img-fluid">
+                  <img src="assets/img/iPhone6_34FR_SpGry_iPhone6plus_34FL_SpGry_Homescreen_HERO.png" alt="Alt Text" class="img-fluid">
                 </div>
                 <div class="item-name">
                   Product Name
                 </div>
-                <button class="overlay d-none">
+                <div class="overlay d-none">
                   View
-                </button>
+                </div>
               </a>
             </div>
 
-            <div class="grid-item col-6 col-lg-3">
+            <div class="grid-item col-6 col-md-4 col-lg-3">
               <a href="#">
                 <div class="item-img">
-                  <img src="assets/img/oculus-touch-product-394x263-c.png" alt="" class="img-fluid">
+                  <img src="assets/img/oculus-touch-product-394x263-c.png" alt="Alt Text" class="img-fluid">
                 </div>
                 <div class="item-name">
                   Product Name
                 </div>
-                <button class="overlay d-none">
+                <div class="overlay d-none">
                   View
-                </button>
+                </div>
               </a>
             </div>
 
-            <div class="grid-item col-6 col-lg-3">
+            <div class="grid-item col-6 col-md-4 col-lg-3">
               <a href="#">
                 <div class="item-img">
-                  <img src="assets/img/design_of_useful_things.png" alt="" class="img-fluid">
+                  <img src="assets/img/design_of_useful_things.png" alt="Alt Text" class="img-fluid">
                 </div>
                 <div class="item-name">
                   Long Product Name With Wrapping Line
                 </div>
-                <button class="overlay d-none">
+                <div class="overlay d-none">
                   View
-                </button>
+                </div>
               </a>
             </div>
 
           </div>
-          <!-- /.product-grid -->
+          <!-- /.row -->
 
         </main>
-        <!-- /.content -->
+        <!-- /#ProductGrid -->
         
       </div>
       <!-- /.row -->

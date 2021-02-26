@@ -1,20 +1,16 @@
-
 @font-face {
-font-family: 'Avenir LT Light';
-font-style: normal;
-font-weight: normal;
-src: local('Avenir LT Light'), url('../assets/fonts/AvenirLTProLight.woff') format('woff');
+	font-family: 'Avenir LT Light';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Avenir LT Light'), url('../assets/fonts/AvenirLTStd_Light.woff') format('woff');
 }
 
-
 @font-face {
-font-family: 'Avenir LT Heavy';
-font-style: normal;
-font-weight: normal;
-src: local('Avenir LT Heavy'), url('../assets/fonts/AvenirLTProHeavy.woff') format('woff');
+	font-family: 'Avenir LT Heavy';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Avenir LT Heavy'), url('../assets/fonts/AvenirLTStd_Heavy.woff') format('woff');
 }
-    
-
 
 body {
 	font-size: 14px;
@@ -27,6 +23,15 @@ body {
 
 .heavy {
 	font-family: 'Avenir LT Heavy', sans-serif;
+}
+
+.IM-caret-down {
+	position: absolute;
+	top: 31px;
+	right: -8px;
+	border-style: solid;
+	border-width: 14px 7px 0 7px;
+	border-color: #82001c transparent;
 }
 
 h1.page-title {
@@ -42,12 +47,34 @@ h4.sidebar-title {
 	font-size: 14px;
 	color: #464646;
 	text-transform: uppercase;
+	margin-bottom: 20px;
+}
+
+a.nav-link {
+	padding: .6rem 1rem .5rem;
+}
+
+.navbar-toggler {
+	padding: 8px 15px;
+}
+
+.navbar-toggler .icon-bar {
+	display: block;
+	background-color: #ffffff;
+	height: 2px;
+	width: 33px;
+}
+
+.navbar-toggler .icon-bar+.icon-bar {
+	margin-top: 5px;
 }
 
 #MainMenu {
-	background: #82001c;
+	background-color: #82001c;
 	text-transform: uppercase;
 	padding: 0;
+	max-width: 1300px;
+	margin: 0 auto;
 }
 
 #MainMenu>.container {
@@ -56,7 +83,7 @@ h4.sidebar-title {
 }
 
 #MainMenu a.navbar-brand {
-	margin: 0 auto 0 -56px;
+	margin: 0px auto 0px -56px;
 }
 
 #MainMenu a.navbar-brand img {
@@ -64,18 +91,26 @@ h4.sidebar-title {
 }
 
 #MainMenu .top-left-banner {
+	position: relative;
 	display: -ms-flexbox;
 	display: flex;
 	-ms-flex-align: center;
 	align-items: center;
 	color: #ff8fa7;
-	font-size: 11px;
-	background: #b20127;
+	font-size: 12px;
+	background-color: #b20127;
+	margin-left: -173px;
+	padding-left: 173px;
+	padding-right: 55px;
 }
 
 #MainMenu ul.navbar-nav>li.nav-item>a.nav-link {
 	color: #ff8fa7;
-	font-size: 11px;
+	font-size: 12px;
+}
+
+#MainMenu ul.navbar-nav>li.nav-item:last-of-type>a.nav-link {
+	padding-right: 0;
 }
 
 #SubMenu {
@@ -83,12 +118,17 @@ h4.sidebar-title {
 }
 
 #SubMenu a.nav-link {
+	position: relative;
 	color: #82001c;
 	font-family: 'Oswald', sans-serif;
 	font-size: 18px;
-	font-weight: 600;
+	font-weight: 500;
 	text-transform: uppercase;
-	padding-bottom: 0;
+	margin-right: 75px;
+}
+
+#SubMenu a.nav-link.customer-service {
+	margin: 0;
 }
 
 #SubMenu span.find-by {
@@ -97,7 +137,7 @@ h4.sidebar-title {
 	font-family: 'Avenir LT Light', sans-serif;
 	font-size: 12px;
 	text-transform: uppercase;
-	line-height: 0;
+	margin-bottom: -4px;
 }
 
 #BreadcrumbNav {
@@ -115,6 +155,7 @@ h4.sidebar-title {
 	color: #464646;
 	font-size: 12px;
 	text-transform: uppercase;
+	padding-top: 2px;
 }
 
 #SidebarFilters ul.nav>li.nav-item {
@@ -122,35 +163,59 @@ h4.sidebar-title {
 }
 
 #SidebarFilters ul.nav>li.nav-item>a {
+	position: relative;
 	padding-left: 0;
+	color: #464646;
+	text-shadow: -.25px -.25px 0 transparent, .25px .25px transparent;
 }
 
-.product-grid .grid-item {
+#SidebarFilters ul.nav>li.nav-item>a:hover,
+#SidebarFilters ul.nav>li.nav-item>a.active {
+	text-shadow: -.25px -.25px 0 #464646, .25px .25px #464646;
+}
+
+#SidebarFilters ul.nav>li.nav-item>a:hover:after,
+#SidebarFilters ul.nav>li.nav-item>a.active:after {
+	position: absolute;
+	right: 0;
+	content: '\f054';
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+	text-shadow: none;
+	opacity: 0.75;
+}
+
+#ProductGrid .grid-item {
 	position: relative;
 	border: 1px solid #d4d4d2;
+	padding: 0 20px;
 }
 
-.product-grid .grid-item a {
+#ProductGrid .grid-item a {
 	display: -ms-flexbox!important;
 	display: flex!important;
 	flex-direction: column;
 	height: 100%;
-	padding: 10px;
+	padding: 10px 0;
 	color: #464646;
 	font-family: 'Avenir LT Heavy', sans-serif;
 	text-decoration: none !important;
 }
 
-.product-grid .grid-item .item-img {
+#ProductGrid .grid-item .item-img {
 	margin: auto;
 }
 
-.product-grid .grid-item button.overlay {
+#ProductGrid .grid-item .item-name {
+	font-size: 13px;
+}
+
+#ProductGrid .grid-item .overlay {
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	background: #ffffff;
+	background-color: #ffffff;
 	opacity: 0.9;
 	border: 2px solid #82001c;
 	color: #82001c;
@@ -160,13 +225,120 @@ h4.sidebar-title {
 	padding: 4.5px 39px;
 }
 
-.product-grid .grid-item a:hover .overlay,
-.product-grid .grid-item a:active .overlay {
+#ProductGrid .grid-item a:hover .overlay,
+#ProductGrid .grid-item a:active .overlay {
 	display: block !important;
 }
 
+@media (min-width: 576px) and (max-width: 991.98px) {
+	#BreadcrumbNav>.container {
+		padding-left: 0
+	}
+}
+
 @media (max-width: 991.98px) {
+	#MainMenu {
+		padding: 10px 15px 10px 0;
+		border-bottom: 1px solid #fff;
+	}
 	#MainMenu .top-left-banner {
 		display: none !important;
+	}
+	#SubMenu {
+		background-color: #b20127;
+		padding: 10px 15px;
+	}
+	#SubMenu .mx-auto {
+		margin-left: 0 !important;
+		padding: 0;
+		width: 100%;
+	}
+	#SubMenu ul.nav>.nav-item {
+		margin-right: auto;
+	}
+	#SubMenu a.nav-link,
+	#SubMenu span.find-by {
+		color: #fff;
+	}
+	#SubMenu a.nav-link {
+		padding: 5px 20px 5px 0;
+		margin-right: 15px;
+		font-size: 24px;
+		font-weight: 400;
+	}
+	#SubMenu span.find-by {
+		font-size: 16px;
+		margin-bottom: -7px;
+	}
+	#SubMenu .IM-caret-down {
+		border-color: #ffffff transparent;
+	}
+	#BreadcrumbNav {
+		margin-bottom: 0;
+	}
+}
+
+@media (max-width: 767.98px) {
+	#ProductGrid .grid-item {
+		border: 0;
+		margin-bottom: 30px;
+	}
+	#ProductGrid .grid-item .item-img {
+		margin: 0 auto 15px;
+	}
+	#ProductGrid .grid-item .item-name {
+		font-family: 'Oswald', sans-serif;
+		font-size: 30px;
+	}
+}
+
+@media (min-width: 992px) {
+	#MainMenu:before {
+		content: "";
+		position: absolute;
+		top: 11px;
+		left: -25px;
+		width: 50px;
+		height: 50px;
+		transform: rotate(45deg);
+		background-color: #fff;
+		z-index: 99;
+	}
+	#MainMenu:after {
+		content: "";
+		position: absolute;
+		top: 11px;
+		right: -25px;
+		width: 50px;
+		height: 50px;
+		transform: rotate(45deg);
+		background-color: #fff;
+	}
+	#MainMenu .top-left-banner:after {
+		content: "";
+		position: absolute;
+		z-index: 999;
+		top: 0;
+		right: 0;
+		border-style: solid;
+		border-width: 0 34px 34px 0;
+		border-color: transparent #82001c transparent transparent;
+	}
+	#SidebarFilters.col-lg-3 {
+		-ms-flex: 0 0 19%;
+		flex: 0 0 19%;
+		max-width: 19%;
+	}
+	#ProductGrid.col-lg-9 {
+		-ms-flex: 0 0 79%;
+		flex: 0 0 79%;
+		max-width: 79%;
+		margin-left: auto;
+	}
+}
+
+@media (min-width: 1200px) {
+	.container {
+		max-width: 980px;
 	}
 }
